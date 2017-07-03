@@ -3,11 +3,10 @@ using namespace std;
 
 int main(int argc, char **argv)
 {
-	assert(argc == 4); //Usage: max_n, min_val, max_val.
 	long long seed;
 	asm("rdtsc" : "=A"(seed));
 	srand(seed);
-	int max_n = atoi(argv[1]), min_val = atoi(argv[2]), max_val = atoi(argv[3]);
+	int max_n = 10, min_val = -10, max_val = 10;
 	int n = rand() % max_n + 1;
 	printf("%d\n", n);
 	for (int i = 0; i < n; i++) {
